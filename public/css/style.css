@@ -1,0 +1,47 @@
+
+body, h1, h2, h3, h4, h5, h6{
+  font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+h1 {
+  padding: 10px;
+}
+
+label {
+  margin-top: 5px;
+}
+
+
+.no-outline:focus {
+  outline: none;
+}
+
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+  padding: 8px 20px;
+}
+
+
+.form-check-inline{
+  display: inline-table;
+}
+
+
+#templates {display: none;}
+
+
+#dlgText {font-size: 10pt; font-family: monospace;}
+
+tr.ERR {
+  color: red;
+}
+
+li.lab-item{
+  cursor: pointer;
+}
+
+li.lab-item:hover{
+  background-color: #007bff;
+  color: #fff;
+}
