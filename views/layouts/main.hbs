@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/ie-color-scheme.css">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <title>Панель обработки входящих сообщений</title>
 
     <title>{{ title }}</title>
@@ -28,6 +30,48 @@
         {{{body}}}
     </div>
     {{> footer}}
+
+    <script>
+        Vue.config.devtools = true;
+
+
+        function showLoading() {
+            document.getElementById('loader').classList.add('is-active');
+        }
+        function hideLoading() {
+            document.getElementById('loader').classList.remove('is-active');
+        }
+
+
+        window.addEventListener('load', function () {
+            console.log('READY MAIN TEMPLATE');
+
+            function initAxios() {
+                // declare a request interceptor
+                axios.interceptors.request.use(config => {
+                    showLoading();
+                    return config;
+                }, error => {
+                    hideLoading();
+                    // handle the error
+                    return Promise.reject(error);
+                });
+
+                // declare a response interceptor
+                axios.interceptors.response.use((response) => {
+                    hideLoading();
+                    return response;
+                }, error => {
+                    hideLoading();
+                    // handle the response error
+                    return Promise.reject(error);
+                });
+            }
+
+            main();
+        });
+    </script>
+
 </body>
 
 </html>

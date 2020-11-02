@@ -103,8 +103,8 @@
                     });
                     console.log(answer.data);
                     if(answer.data && answer.data.success){
-                        window.localStorage.accessToken = answer.data.grant.accessToken;
-                        window.localStorage.refreshToken = answer.data.grant.refreshToken;
+                        window.sessionStorage.accessToken = answer.data.grant.accessToken;
+                        window.sessionStorage.refreshToken = answer.data.grant.refreshToken;
                     }
                 }
             },
@@ -115,9 +115,9 @@
                 axios.interceptors.request.use(config => {
                     // me.wait(true);
                     document.getElementById('loader').classList.add('is-active');
-                    const token = window.localStorage.getItem('accessToken');
+                    const token = window.sessionStorage.getItem('accessToken');
                     if(token){
-                        config.headers.Authorization = 'Bearer ' + window.localStorage.getItem('accessToken');
+                        config.headers.Authorization = 'Bearer ' + window.sessionStorage.getItem('accessToken');
                     }
                     return config;
                 }, error => {

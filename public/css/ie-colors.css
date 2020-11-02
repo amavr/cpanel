@@ -4,6 +4,12 @@
 
 }
 
+.w3-sidebar .nav-item-container.active {
+    font-weight: bold !important;
+    width: 100%;
+    text-align: left;
+}
+
 .w3-sidebar .w3-bar-item.active {
     background-color: #b6dfff !important;
 }

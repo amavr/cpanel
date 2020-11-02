@@ -53,8 +53,12 @@ app.use('/template', (req, res, next) => {
 
 app.use('/api', apiRouter);
 
+const Utils = require('./helpers/utils');
+
 app.use("*", function (req, res) {
-    res.render("index");
+    const menu = Utils.makeSidebar('admin', req.url);
+    console.log(menu);
+    res.render("index", {sidebar: { sections: menu }});
 });
 
 

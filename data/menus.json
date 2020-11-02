@@ -1,0 +1,42 @@
+{
+    "api": {
+        "/v1/auth": {
+            "post": [],
+            "get": []
+        },
+        "/v1/dashboard": {
+            "get": ["demo", "tester"]
+        }
+    },
+    "sections": {
+        "stat": {
+            "title": "Статистика"
+        },
+        "ctrl": {
+            "title": "Управление"
+        },
+        "mon": {
+            "title": "Мониторинг"
+        }
+    },
+    "pages": {
+        "dashboard": {
+            "url": "/",
+            "title": "Обзор",
+            "sections": ["stat"],
+            "roles": ["demo", "tester"]
+        },
+        "errors": {
+            "url": "/errors",
+            "title": "Ошибки",
+            "sections": ["mon"],
+            "roles": ["admin", "tester"]
+        },
+        "receive": {
+            "url": "/loading",
+            "title": "Загрузка",
+            "sections": ["stat", "mon"],
+            "roles": ["admin", "tester"]
+        }
+    }
+}

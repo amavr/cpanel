@@ -8,8 +8,6 @@
 </div>
 
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
 
 <script>
@@ -22,7 +20,6 @@
     }
 
     // Объект добавляется в экземпляр Vue
-    Vue.config.devtools = true;
     const vm = new Vue({
         el: '#app',
         data: xdata,
@@ -36,11 +33,9 @@
         }
     });
 
-    window.addEventListener('load', function () {
-        console.log('READY');
-
+    function main(){
+        console.log('READY INDEX');
         vm.test();
-
-    });
+    }
 
 </script>

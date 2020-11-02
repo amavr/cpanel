@@ -1,0 +1,35 @@
+/*
+    ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+.wrapper {
+    display: block;
+}
+
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #fafafa;
+    color: #000;
+    transition: all 0.3s;
+    xfont-family: 'Montserrat';
+    font-family: 'Roboto';
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* top layer */
+    z-index: 9999;    
+    box-shadow: var(--bs-sm);
+    border-right: #d2d2d2 1px solid;
+    box-shadow: 0 0 15px -8px #888;
+}
