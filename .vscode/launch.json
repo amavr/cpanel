@@ -17,7 +17,8 @@
             "outputCapture": "std",
             "console": "internalConsole",
             "env": {
-                "SECRET":"TOPSECRET"
+                "SECRET":"TOPSECRET",
+                "PORT": "3300"
             }
         }
     ]
