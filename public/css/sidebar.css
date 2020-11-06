@@ -5,7 +5,7 @@
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     background: #fafafa;
 }
 
@@ -20,7 +20,7 @@ body {
     color: #000;
     transition: all 0.3s;
     xfont-family: 'Montserrat';
-    font-family: 'Roboto';
+    font-family: sans-serif, 'Roboto';
     min-width: 250px;
     max-width: 250px;
     height: 100vh;
@@ -32,4 +32,9 @@ body {
     box-shadow: var(--bs-sm);
     border-right: #d2d2d2 1px solid;
     box-shadow: 0 0 15px -8px #888;
+}
+
+#sidebar .nav-item-container {
+    display: block;
+    text-align: left;
 }
